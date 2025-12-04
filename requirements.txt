@@ -1,0 +1,11 @@
+numpy
+pandas
+asyncio
+requests
+dotenv
+streamlit
+uvicorn
+pydantic
+setuptools
+beeai-framework[wikipedia]
+-e .
