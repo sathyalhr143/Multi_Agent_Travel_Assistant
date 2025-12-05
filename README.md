@@ -5,6 +5,9 @@ A sophisticated travel planning application built using the BeeAI Framework. Thi
 
 https://multiagenttravelassistant-sathyaraj.streamlit.app/
 
+
+https://github.com/user-attachments/assets/68e75781-e717-4bdb-97f8-8aebdd7d922a
+
 ## 📖 Table of Contents
 - Key Features
 
@@ -127,4 +130,4 @@ python steamlit_app_local.py
 
 - Open a Pull Request
 
-https://github.com/user-attachments/assets/68e75781-e717-4bdb-97f8-8aebdd7d922a
+
