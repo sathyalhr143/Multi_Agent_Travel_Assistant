@@ -106,13 +106,15 @@ python steamlit_app_local.py
 ### 📂 Project Structure
 - setup.py: Configuration for packaging the project, allowing it to be installed as a library.
 
-- requirements.txt: List of external Python packages required to run the project.
+- requirements.txt: List of external Python packages required to run the project expecelly to integrate streamlit cloud
 
-- src/ or end_to_end_travel_multi_agent/: Contains the source code for the agents and tools.
+- agent.py: Code for out multi agent the brain of this project
 
+- app_streamlit.py: A Streamlit app file to deploy the multi-agent using secrets (api keys)
 
+- steamlit_app_local.py: A streamlit app file to run the app locally to verify the working
 
-
+- requirements_.txt: a simpler version of requirement.txt which will install all required dependencies
 
 ### 🤝 Contributing
 - Fork the Project
