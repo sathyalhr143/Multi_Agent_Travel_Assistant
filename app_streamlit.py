@@ -55,42 +55,17 @@ except ImportError:
     logger = logging.getLogger(__name__)
 
 # 2. Hard Reload of Agent Module
-# try:
-#     # Explicitly remove 'agent' from sys.modules to force a fresh load from disk
-#     if 'agent' in sys.modules:
-#         del sys.modules['agent']
-    
-#     import agent
-#     from agent import multi_agent_travel_planner_with_language
-#     logger.info("Successfully reloaded agent module.")
-# except ImportError:
-#     st.error("⚠️ Could not find 'agent.py'. Please ensure it is in the same directory.")
-#     st.stop()
-
-
-# 2. Robust Import Logic
 try:
-    # Option A: Try standard import
+    # Explicitly remove 'agent' from sys.modules to force a fresh load from disk
+    if 'agent' in sys.modules:
+        del sys.modules['agent']
+    
     import agent
     from agent import multi_agent_travel_planner_with_language
-    logger.info("Successfully imported agent module.")
-
+    logger.info("Successfully reloaded agent module.")
 except ImportError:
-    # Option B: Add current directory to path explicitly (Fixes some Streamlit Cloud path issues)
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    sys.path.append(current_dir)
-    
-    try:
-        import agent
-        from agent import multi_agent_travel_planner_with_language
-        logger.info("Successfully imported agent module after path fix.")
-    except ImportError as e:
-        # List files to debug on Streamlit Cloud logs
-        files = os.listdir(os.getcwd())
-        st.error(f"⚠️ Critical Error: Could not import 'agent.py'.")
-        st.write(f"Current Directory: `{os.getcwd()}`")
-        st.write(f"Files found here: `{files}`")
-        st.stop()
+    st.error("⚠️ Could not find 'agent.py'. Please ensure it is in the same directory.")
+    st.stop()
 
 # --- Custom Agent Runner ---
 class AgentRunner:
