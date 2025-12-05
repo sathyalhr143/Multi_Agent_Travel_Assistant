@@ -1,0 +1,24 @@
+numpy
+pandas
+asyncio
+requests
+dotenv
+python-dotenv
+streamlit
+uvicorn
+pydantic
+setuptools
+beeai-framework>=0.1.71
+openai
+langchain-openai
+wikipedia-api
+watchfiles
+# # # -e .
+# streamlit
+# beeai-framework>=0.1.71
+# openai
+# langchain-openai
+# python-dotenv
+# pydantic
+# wikipedia-api
+# watchfiles
