@@ -18,7 +18,7 @@ from beeai_framework.tools.handoff import HandoffTool
 from beeai_framework.middleware.trajectory import GlobalTrajectoryMiddleware
 from beeai_framework.tools import Tool
 
-from fastapi import FastAPI
+# from fastapi import FastAPI
 from pydantic import BaseModel
 import asyncio
 
